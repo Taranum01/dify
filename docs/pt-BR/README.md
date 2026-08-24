@@ -102,8 +102,6 @@ Todas os recursos do Dify vêm com APIs correspondentes, permitindo que você in
 - **Dify para empresas/organizações</br>**
   Oferecemos recursos adicionais voltados para empresas. Você pode [falar conosco por e-mail](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry) para discutir necessidades empresariais. <br/>
 
-  > Para startups e pequenas empresas que utilizam AWS, confira o [Dify Premium no AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) e implemente no seu próprio AWS VPC com um clique. É uma oferta AMI acessível com a opção de criar aplicativos com logotipo e marca personalizados.
-
 ## Mantendo-se atualizado
 
 Dê uma estrela no Dify no GitHub e seja notificado imediatamente sobre novos lançamentos.
@@ -184,6 +182,10 @@ Implante o Dify na Alibaba Cloud com um clique usando o [Alibaba Cloud Data Mana
 #### Usando Azure Devops Pipeline para Implantar no AKS
 
 Implante o Dify no AKS com um clique usando [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)
+
+#### Implantação com Sealos
+
+Implante o Dify com um clique usando a [Sealos App Store](https://sealos.io/products/app-store/dify/)
 
 ## Contribuindo
 

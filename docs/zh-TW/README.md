@@ -129,8 +129,6 @@ Dify 的所有功能都提供相應的 API，因此您可以輕鬆地將 Dify �
 - **企業/組織版 Dify</br>**
   我們提供額外的企業中心功能。[通過這個聊天機器人記錄您的問題](https://udify.app/chat/22L1zSxg6yW1cWQg)或[發送電子郵件給我們](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry)討論企業需求。</br>
 
-  > 對於使用 AWS 的初創企業和小型企業，請查看 [AWS Marketplace 上的 Dify Premium](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)，並一鍵部署到您自己的 AWS VPC。這是一個經濟實惠的 AMI 產品，可選擇使用自定義徽標和品牌創建應用。
-
 ## 保持領先
 
 在 GitHub 上為 Dify 加星，即時獲取新版本通知。
@@ -189,6 +187,10 @@ Dify 的所有功能都提供相應的 API，因此您可以輕鬆地將 Dify �
 #### 使用 Azure Devops Pipeline 部署到AKS
 
 使用[Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS) 將 Dify 一鍵部署到 AKS
+
+#### 使用 Sealos 部署
+
+透過 [Sealos App Store](https://sealos.io/products/app-store/dify/) 一鍵部署 Dify
 
 ## 貢獻
 

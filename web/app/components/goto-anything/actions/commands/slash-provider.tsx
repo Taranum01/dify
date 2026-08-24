@@ -2,6 +2,7 @@
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 import { ENABLE_FEATURE_PREVIEW } from '@/config'
+import { useDocLink } from '@/context/i18n'
 import { setLocaleOnClient } from '@/i18n-config'
 import { accountCommand } from './account'
 import { communityCommand } from './community'
@@ -15,15 +16,18 @@ import { slashCommandRegistry } from './registry'
 import { themeCommand } from './theme'
 
 type SlashCommandDeps = {
+  getDocsHomeUrl: () => string
   setTheme: (theme: string) => void
   setLocale: typeof setLocaleOnClient
 }
 
 const registerSlashCommands = (deps: SlashCommandDeps) => {
   slashCommandRegistry.register(themeCommand, { setTheme: deps.setTheme })
-  slashCommandRegistry.register(languageCommand, { setLocale: deps.setLocale as (locale: string) => Promise<void> })
+  slashCommandRegistry.register(languageCommand, {
+    setLocale: deps.setLocale as (locale: string) => Promise<void>,
+  })
   slashCommandRegistry.register(forumCommand, {})
-  slashCommandRegistry.register(docsCommand, {})
+  slashCommandRegistry.register(docsCommand, { getDocsHomeUrl: deps.getDocsHomeUrl })
   slashCommandRegistry.register(communityCommand, {})
   slashCommandRegistry.register(accountCommand, {})
   slashCommandRegistry.register(goCommand, {})
@@ -47,13 +51,15 @@ const unregisterSlashCommands = () => {
 
 export const SlashCommandProvider = () => {
   const theme = useTheme()
+  const getDocsHomeUrl = useDocLink()
   useEffect(() => {
     registerSlashCommands({
+      getDocsHomeUrl,
       setTheme: theme.setTheme,
       setLocale: setLocaleOnClient,
     })
     return () => unregisterSlashCommands()
-  }, [theme.setTheme])
+  }, [getDocsHomeUrl, theme.setTheme])
 
   return null
 }

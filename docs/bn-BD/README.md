@@ -129,8 +129,6 @@ LLM ফাংশন কলিং বা ReAct উপর ভিত্তি ক�
 - **এন্টারপ্রাইজ / প্রতিষ্ঠানের জন্য Dify</br>**
   আমরা এন্টারপ্রাইজ/প্রতিষ্ঠান-কেন্দ্রিক সেবা প্রদান করে থাকি । [এই চ্যাটবটের মাধ্যমে আপনার প্রশ্নগুলি আমাদের জন্য লগ করুন।](https://udify.app/chat/22L1zSxg6yW1cWQg) অথবা [আমাদের ইমেল পাঠান](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry) আপনার চাহিদা সম্পর্কে আলোচনা করার জন্য। </br>
 
-  > AWS ব্যবহারকারী স্টার্টআপ এবং ছোট ব্যবসার জন্য, [AWS মার্কেটপ্লেসে Dify Premium](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) দেখুন এবং এক-ক্লিকের মাধ্যমে এটি আপনার নিজস্ব AWS VPC-তে ডিপ্লয় করুন। এটি একটি সাশ্রয়ী মূল্যের AMI অফার, যাতে কাস্টম লোগো এবং ব্র্যান্ডিং সহ অ্যাপ তৈরির সুবিধা আছে।
-
 ## এগিয়ে থাকুন
 
 GitHub-এ ডিফাইকে স্টার দিয়ে রাখুন এবং নতুন রিলিজের খবর তাৎক্ষণিকভাবে পান।
@@ -191,6 +189,10 @@ Dify-এর PostgreSQL ডাটাবেসকে ডেটা সোর্স 
 #### AKS-এ ডিপ্লয় করার জন্য Azure Devops Pipeline ব্যবহার
 
 [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS) ব্যবহার করে Dify কে AKS-এ এক ক্লিকে ডিপ্লয় করুন
+
+#### Sealos ব্যবহার করে ডিপ্লয়
+
+[Sealos App Store](https://sealos.io/products/app-store/dify/) ব্যবহার করে Dify-কে এক ক্লিকে ডিপ্লয় করুন
 
 ## Contributing
 

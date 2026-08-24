@@ -128,8 +128,6 @@ Tutte le offerte di Dify sono dotate di API corrispondenti, permettendovi di int
 - **Dify per Aziende / Organizzazioni<br/>**
   Offriamo funzionalità aggiuntive specifiche per le aziende. Potete [scriverci via email](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry) per discutere le vostre esigenze aziendali. <br/>
 
-  > Per startup e piccole imprese che utilizzano AWS, date un'occhiata a [Dify Premium su AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) e distribuitelo con un solo clic nel vostro AWS VPC. Si tratta di un'offerta AMI conveniente con l'opzione di creare app con logo e branding personalizzati.
-
 ## Resta Sempre Aggiornato
 
 Mettete una stella a Dify su GitHub e ricevete notifiche immediate sui nuovi rilasci.
@@ -189,6 +187,10 @@ Distribuzione con un clic di Dify su Alibaba Cloud con [Alibaba Cloud Data Manag
 #### Utilizzo di Azure DevOps Pipeline per la Distribuzione su AKS
 
 Distribuite Dify con un clic in AKS utilizzando [Azure DevOps Pipeline Helm Chart di @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)
+
+#### Distribuzione con Sealos
+
+Distribuite Dify con un clic tramite [Sealos App Store](https://sealos.io/products/app-store/dify/)
 
 ## Contribuire
 

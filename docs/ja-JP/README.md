@@ -104,8 +104,6 @@ LLM Function CallingやReActに基づくエージェントの定義が可能で�
 - **企業/組織向けのDify</br>**
   企業中心の機能を提供しています。[メールを送信](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry)して企業のニーズについて相談してください。 </br>
 
-  > AWSを使用しているスタートアップ企業や中小企業の場合は、[AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)のDify Premiumをチェックして、ワンクリックで自分のAWS VPCにデプロイできます。さらに、手頃な価格のAMIオファリングとして、ロゴやブランディングをカスタマイズしてアプリケーションを作成するオプションがあります。
-
 ## 最新の情報を入手
 
 GitHub上でDifyにスターを付けることで、Difyに関する新しいニュースを受け取れます。
@@ -186,6 +184,10 @@ Grafanaにダッシュボードをインポートし、DifyのPostgreSQLデー�
 #### AKSへのデプロイにAzure Devops Pipelineを使用
 
 [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)を使用してDifyをAKSにワンクリックでデプロイ
+
+#### Sealosを使用したデプロイ
+
+[Sealos App Store](https://sealos.io/products/app-store/dify/)を使用してDifyをワンクリックでデプロイできます
 
 ## 貢献
 

@@ -98,8 +98,6 @@ Tất cả các dịch vụ của Dify đều đi kèm với các API tương �
 - **Dify cho doanh nghiệp / tổ chức</br>**
   Chúng tôi cung cấp các tính năng bổ sung tập trung vào doanh nghiệp. [Gửi email cho chúng tôi](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry) để thảo luận về nhu cầu doanh nghiệp. <br/>
 
-  > Đối với các công ty khởi nghiệp và doanh nghiệp nhỏ sử dụng AWS, hãy xem [Dify Premium trên AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) và triển khai nó vào AWS VPC của riêng bạn chỉ với một cú nhấp chuột. Đây là một AMI giá cả phải chăng với tùy chọn tạo ứng dụng với logo và thương hiệu tùy chỉnh.
-
 ## Luôn cập nhật
 
 Yêu thích Dify trên GitHub và được thông báo ngay lập tức về các bản phát hành mới.
@@ -179,6 +177,10 @@ Triển khai Dify lên Alibaba Cloud chỉ với một cú nhấp chuột bằng
 #### Sử dụng Azure Devops Pipeline để Triển khai lên AKS
 
 Triển khai Dify lên AKS chỉ với một cú nhấp chuột bằng [Azure Devops Pipeline Helm Chart bởi @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)
+
+#### Triển khai với Sealos
+
+Triển khai Dify chỉ với một cú nhấp chuột từ [Sealos App Store](https://sealos.io/products/app-store/dify/)
 
 ## Đóng góp
 

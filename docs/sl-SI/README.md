@@ -125,8 +125,6 @@ AVse ponudbe Difyja so opremljene z ustreznimi API-ji, tako da lahko Dify brez t
 - **Dify za podjetja/organizacije</br>**
   Ponujamo dodatne funkcije, osredotočene na podjetja. Zabeležite svoja vprašanja prek tega klepetalnega robota ali nam pošljite e-pošto, da se pogovorimo o potrebah podjetja. </br>
 
-  > Za novoustanovljena podjetja in mala podjetja, ki uporabljajo AWS, si oglejte Dify Premium na AWS Marketplace in ga z enim klikom uvedite v svoj AWS VPC. To je cenovno ugodna ponudba AMI z možnostjo ustvarjanja aplikacij z logotipom in blagovno znamko po meri.
-
 ## Staying ahead
 
 Star Dify on GitHub and be instantly notified of new releases.
@@ -185,6 +183,10 @@ Z enim klikom namestite Dify na Alibaba Cloud z [Alibaba Cloud Data Management](
 #### Uporaba Azure Devops Pipeline za uvajanje v AKS
 
 Z enim klikom namestite Dify v AKS z uporabo [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)
+
+#### Namestitev s Sealos
+
+Z enim klikom namestite Dify prek [Sealos App Store](https://sealos.io/products/app-store/dify/)
 
 ## Prispevam
 

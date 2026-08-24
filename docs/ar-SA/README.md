@@ -92,8 +92,6 @@
 - **مشروع Dify للشركات / المؤسسات</br>**
   نحن نوفر ميزات إضافية مركزة على الشركات. [جدول اجتماع معنا](https://cal.com/guchenhe/30min) أو [أرسل لنا بريدًا إلكترونيًا](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry) لمناقشة احتياجات الشركات. </br>
 
-> بالنسبة للشركات الناشئة والشركات الصغيرة التي تستخدم خدمات AWS، تحقق من [Dify Premium على AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6) ونشرها في شبكتك الخاصة على AWS VPC بنقرة واحدة. إنها عرض AMI بأسعار معقولة مع خيار إنشاء تطبيقات بشعار وعلامة تجارية مخصصة.
-
 ## البقاء قدمًا
 
 قم بإضافة نجمة إلى Dify على GitHub وتلق تنبيهًا فوريًا بالإصدارات الجديدة.
@@ -174,6 +172,10 @@ docker compose up -d
 #### استخدام Azure Devops Pipeline للنشر على AKS
 
 انشر Dify على AKS بنقرة واحدة باستخدام [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)
+
+#### استخدام Sealos للنشر
+
+انشر Dify بنقرة واحدة باستخدام [Sealos App Store](https://sealos.io/products/app-store/dify/)
 
 ## المساهمة
 

@@ -97,8 +97,6 @@ Dify의 모든 제품에는 해당 API가 함께 제공되므로 Dify를 자신�
 - **기업 / 조직을 위한 Dify</br>**
   우리는 추가적인 기업 중심 기능을 제공합니다. 잡거나 [이메일 보내기](mailto:business@dify.ai?subject=%5BGitHub%5DBusiness%20License%20Inquiry)를 통해 기업 요구 사항을 논의하십시오. </br>
 
-  > AWS를 사용하는 스타트업 및 중소기업의 경우 [AWS Marketplace에서 Dify Premium](https://aws.amazon.com/marketplace/pp/prodview-t22mebxzwjhu6)을 확인하고 한 번의 클릭으로 자체 AWS VPC에 배포하십시오. 맞춤형 로고와 브랜딩이 포함된 앱을 생성할 수 있는 옵션이 포함된 저렴한 AMI 제품입니다.
-
 ## 앞서가기
 
 GitHub에서 Dify에 별표를 찍어 새로운 릴리스를 즉시 알림 받으세요.
@@ -179,6 +177,10 @@ Dify를 Kubernetes에 배포하고 프리미엄 스케일링 설정을 구성했
 #### AKS에 배포하기 위해 Azure Devops Pipeline 사용
 
 [Azure Devops Pipeline Helm Chart by @LeoZhang](https://github.com/Ruiruiz30/Dify-helm-chart-AKS)을 사용하여 Dify를 AKS에 원클릭으로 배포
+
+#### Sealos를 사용한 배포
+
+[Sealos App Store](https://sealos.io/products/app-store/dify/)를 사용하여 Dify를 원클릭으로 배포할 수 있습니다
 
 ## 기여
 

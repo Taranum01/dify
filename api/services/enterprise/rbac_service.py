@@ -255,6 +255,7 @@ class ResourceUserAccessPoliciesResponse(_RBACModel):
 
 class ReplaceUserAccessPolicies(_RBACModel):
     access_policy_ids: list[str] = Field(default_factory=list)
+    account_ids: list[str] = Field(default_factory=list)
 
     @field_validator("access_policy_ids", mode="before")
     @classmethod
@@ -316,9 +317,6 @@ _LEGACY_WORKSPACE_OWNER_KEYS: list[str] = [
     "credential.use",
     "credential.create",
     "credential.manage",
-    "billing.view",
-    "billing.subscription.manage",
-    "billing.manage",
     "app.acl.preview",
     "app_library.access",
     "app.create_and_management",
@@ -332,6 +330,7 @@ _LEGACY_WORKSPACE_OWNER_KEYS: list[str] = [
     "snippets.management",
     "tool.manage",
     "mcp.manage",
+    "agent.manage",
 ]
 
 _LEGACY_WORKSPACE_ADMIN_KEYS: list[str] = [
@@ -348,9 +347,6 @@ _LEGACY_WORKSPACE_ADMIN_KEYS: list[str] = [
     "credential.use",
     "credential.create",
     "credential.manage",
-    "billing.view",
-    "billing.subscription.manage",
-    "billing.manage",
     "app_library.access",
     "app.create_and_management",
     "app.tag.manage",
@@ -362,6 +358,7 @@ _LEGACY_WORKSPACE_ADMIN_KEYS: list[str] = [
     "snippets.management",
     "tool.manage",
     "mcp.manage",
+    "agent.manage",
 ]
 
 _LEGACY_WORKSPACE_EDITOR_KEYS: list[str] = [
@@ -376,9 +373,7 @@ _LEGACY_WORKSPACE_EDITOR_KEYS: list[str] = [
     "dataset.external.connect",
     "snippets.create_and_modify",
     "tool.manage",
-    "billing.view",
-    "billing.subscription.manage",
-    "billing.manage",
+    "agent.manage",
 ]
 
 _LEGACY_WORKSPACE_NORMAL_KEYS: list[str] = [
@@ -386,9 +381,6 @@ _LEGACY_WORKSPACE_NORMAL_KEYS: list[str] = [
     "plugin.install",
     "credential.use",
     "app_library.access",
-    "billing.view",
-    "billing.subscription.manage",
-    "billing.manage",
 ]
 
 _LEGACY_WORKSPACE_DATASET_OPERATOR_KEYS: list[str] = [
@@ -804,7 +796,6 @@ class RBACService:
             data = _inner_call(
                 "GET",
                 f"{_INNER_PREFIX}/role-permissions/catalog",
-                params={"billing_enabled": dify_config.BILLING_ENABLED},
                 tenant_id=tenant_id,
                 account_id=account_id,
             )
@@ -839,10 +830,13 @@ class RBACService:
             tenant_id: str,
             account_id: str | None = None,
             include_owner: int | None = None,
+            biiling_enabled: bool | None = None,
             *,
             options: ListOption | None = None,
         ) -> Paginated[RBACRole]:
-            params = (options or ListOption()).to_params({"include_owner": include_owner})
+            params = (options or ListOption()).to_params(
+                {"include_owner": include_owner, "biiling_enabled": biiling_enabled}
+            )
             params["dataset_operator_enabled"] = dify_config.DATASET_OPERATOR_ENABLED
             data = _inner_call(
                 "GET",
@@ -878,13 +872,13 @@ class RBACService:
             )
 
         @staticmethod
-        def get(tenant_id: str, account_id: str | None, role_id: str) -> RBACRole:
+        def get(tenant_id: str, account_id: str | None, role_id: str, billing_enabled: bool = True) -> RBACRole:
             data = _inner_call(
                 "GET",
                 f"{_INNER_PREFIX}/roles/item",
                 tenant_id=tenant_id,
                 account_id=account_id,
-                params={"id": role_id},
+                params={"id": role_id, "billing_enabled": billing_enabled},
             )
             return RBACRole.model_validate(data or {})
 
@@ -1126,16 +1120,17 @@ class RBACService:
             tenant_id: str,
             account_id: str | None,
             app_id: str,
-            target_account_id: str,
+            target_account_id: str | None,
             payload: ReplaceUserAccessPolicies,
         ) -> ReplaceUserAccessPoliciesResponse:
+            request_data = payload.model_dump(mode="json")
             data = _inner_call(
                 "PUT",
                 f"{_INNER_PREFIX}/apps/user-access-policies",
                 tenant_id=tenant_id,
                 account_id=account_id,
                 params={"app_id": app_id, "account_id": target_account_id},
-                json=payload.model_dump(mode="json"),
+                json=request_data,
             )
             return ReplaceUserAccessPoliciesResponse.model_validate(data or {})
 
@@ -1295,7 +1290,7 @@ class RBACService:
             tenant_id: str,
             account_id: str | None,
             dataset_id: str,
-            target_account_id: str,
+            target_account_id: str | None,
             payload: ReplaceUserAccessPolicies,
         ) -> ReplaceUserAccessPoliciesResponse:
             data = _inner_call(
@@ -1304,7 +1299,7 @@ class RBACService:
                 tenant_id=tenant_id,
                 account_id=account_id,
                 params={"dataset_id": dataset_id, "account_id": target_account_id},
-                json=payload.model_dump(mode="json"),
+                json=payload.model_dump(mode="json", exclude_unset=True),
             )
             return ReplaceUserAccessPoliciesResponse.model_validate(data or {})
 
