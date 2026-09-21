@@ -37,11 +37,7 @@ describe('StatusContainer', () => {
       expect(screen.getByText('Finished')).toBeInTheDocument()
       expect(container.firstElementChild).toHaveClass('bg-workflow-display-success-bg')
       expect(container.firstElementChild).toHaveClass('text-text-success')
-      expect(
-        container.querySelector(
-          '.bg-\\[url\\(\\~\\@\\/app\\/components\\/workflow\\/run\\/assets\\/highlight\\.svg\\)\\]',
-        ),
-      ).toBeInTheDocument()
+      expect(container.querySelector('[class*=\"lightHighlight\"]')).toBeInTheDocument()
     })
   })
 

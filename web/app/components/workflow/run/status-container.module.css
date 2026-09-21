@@ -1,0 +1,18 @@
+.successBackground {
+  background-image: url(./assets/bg-line-success.svg);
+}
+.errorBackground {
+  background-image: url(./assets/bg-line-error.svg);
+}
+.warningBackground {
+  background-image: url(./assets/bg-line-warning.svg);
+}
+.runningBackground {
+  background-image: url(./assets/bg-line-running.svg);
+}
+.lightHighlight {
+  background-image: url(./assets/highlight.svg);
+}
+.darkHighlight {
+  background-image: url(./assets/highlight-dark.svg);
+}
